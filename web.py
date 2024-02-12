@@ -20,5 +20,29 @@ def list_prof():
     return render_template('list_prof.html',)
 
 
+@app.route('/answer')
+def login():
+    pass
+    return render_template('login.html',)
+
+
+@app.route('/auto_answer')
+def login():
+    pass
+    return render_template('login.html',)
+
+
+@app.route('/login')
+def login():
+    return render_template('login.html',)
+
+
+@app.route('/distribution')
+def distribution():
+    p = ['Астронавт', 'Инженер', 'Медик', 'Геолог', 'Химик', 'Физик', 'Математик', 'Программист',
+         'Психолог', 'Сантехник', 'Электрик', 'Лидер', 'Учёный', 'Художник', 'Педагог']
+    return render_template('distribution.html', people=p)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
