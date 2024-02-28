@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <h2 align="centre">Оформление каюты</h2>
+<table>
+    <colgroup>
+    <col span="2" style="background:Khaki"><!-- С помощью этой конструкции задаем цвет фона для первых двух столбцов таблицы-->
+    <col style="background-color:LightCyan"><!-- Задаем цвет фона для следующего (одного) столбца таблицы-->
+    </colgroup>
+<tr>
+    <th>Цвет стен</th>
+    <th>Эмблема</th>
+</tr>
+
+ {%if 'male' in sex and age > 21%}
+        <tr>
+            <td>
+                <img src="../static/img/blue.png"
+           alt="здесь должна была быть картинка, но не нашлась">
+            </td>
+            <td>
+                <img src="../static/img/man.png"
+           alt="здесь должна была быть картинка, но не нашлась">
+            </td>
+        </tr>
+ {% elif 'male' in sex and age < 21%}
+        <tr>
+            <td>
+                <img src="../static/img/light_blue.png"
+           alt="здесь должна была быть картинка, но не нашлась">
+            </td>
+            <td>
+                <img src="../static/img/child.png"
+           alt="здесь должна была быть картинка, но не нашлась">
+            </td>
+        </tr>
+ {% elif 'female' in sex and age > 21%}
+        <tr>
+            <td>
+                <img src="../static/img/orange.png"
+           alt="здесь должна была быть картинка, но не нашлась">
+            </td>
+            <td>
+                <img src="../static/img/man.png"
+           alt="здесь должна была быть картинка, но не нашлась">
+            </td>
+        </tr>
+ {% elif 'female' in sex and age < 21%}
+        <tr>
+            <td>
+                <img src="../static/img/light_orange.png"
+           alt="здесь должна была быть картинка, но не нашлась">
+            </td>
+            <td>
+                <img src="../static/img/child.png"
+           alt="здесь должна была быть картинка, но не нашлась">
+            </td>
+        </tr>
+ {% endif %}
+</table>
+{% endblock %}
